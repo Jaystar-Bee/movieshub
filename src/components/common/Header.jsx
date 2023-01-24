@@ -3,19 +3,31 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="bg-dark-light">
-      <ul>
-        <li>MoviesHub</li>
-        <NavLink to="/">
+    <div className="bg-dark-light text-white py-4 sticky top-0 mb-6">
+      <ul className="flex items-center container mx-auto space-x-10 text-primary-grey duration-500">
+        <li className="text-white font-bold text-xl">MoviesHub</li>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "text-white" : undefined)}
+        >
           <li>Trending</li>
         </NavLink>
-        <NavLink to="/movies">
+        <NavLink
+          to="/movies"
+          className={({ isActive }) => (isActive ? "text-white" : undefined)}
+        >
           <li>Movies</li>
         </NavLink>
-        <NavLink to="/series">
+        <NavLink
+          to="/series"
+          className={({ isActive }) => (isActive ? "text-white" : undefined)}
+        >
           <li>TV Series</li>
         </NavLink>
-        <NavLink to="/search">
+        <NavLink
+          to="/search"
+          className={({ isActive }) => (isActive ? "text-white" : undefined)}
+        >
           <li>Search</li>
         </NavLink>
       </ul>

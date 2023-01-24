@@ -1,12 +1,13 @@
 
 import './App.css';
 import Router from "./router/Router"
-import Header from './components/common/Header';
 
 function App() {
   return (
     <>
-      <Router />
+      <div className='min-h-screen bg-dark text-white'>
+        <Router />
+      </div>
     </>
   );
 }
