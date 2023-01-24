@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Movies from "../components/common/Movies";
 
 const MoviesView = () => {
   return (
-    <div>MoviesView</div>
-  )
-}
+    <div>
+      <Movies />
+    </div>
+  );
+};
 
-export default MoviesView
+export default MoviesView;

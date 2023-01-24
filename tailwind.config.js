@@ -8,10 +8,16 @@ module.exports = {
       colors: {
         "dark": "#0D0D0F",
         "dark-light": "#161616",
-        "primary-green": "#0D0D0F",
+        "primary-green": "#00CE79",
         "primary-grey": "#898989",
       }
     },
+    container: {
+      center: true,
+      padding: {
+        "2xl": "7rem",
+      },
+    }
   },
   plugins: [],
 }
