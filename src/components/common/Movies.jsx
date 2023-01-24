@@ -47,12 +47,23 @@ const movies = [
 
 const Movies = () => {
   return (
-    <div className="container flex gap-6 justify-center flex-wrap">
+    <div className="container flex gap-10 justify-center flex-wrap pb-20">
       {movies.map((movie) => {
         return (
           <SingleMovie key={movie.id} title={movie.title} img={movie.img} />
         );
       })}
+
+      <div className="mt-6">
+        <ul className="flex gap-6">
+          <button className="bg-dark-light rounded-md hover:bg-primary-green hover:text-dark px-6 py-4 text-lg duration-500">
+            Previous
+          </button>
+          <button className="bg-dark-light rounded-md hover:bg-primary-green hover:text-dark px-6 py-4 text-lg duration-500">
+            Next
+          </button>
+        </ul>
+      </div>
     </div>
   );
 };

@@ -11,8 +11,8 @@ import img8 from "./../../assets/img8.jpg";
 
 const SingleMovie = (props) => {
   return (
-    <div className="w-[17rem] min-w-[14rem] p-4 rounded-md bg-dark-light flex-1 sm:flex-auto">
-      <img src={props.img} alt="" className="h-60 object-cover w-full" />
+    <div className="w-[17rem] min-w-[14rem] p-4 rounded-md bg-dark-light flex-1 sm:flex-auto hover:scale-[1.05] duration-500">
+      <img src={props.img} alt="" className="h-[20rem] object-cover w-full" />
       <p className="text-center font-bold mt-4 text-xl">{props.title}</p>
     </div>
   );
