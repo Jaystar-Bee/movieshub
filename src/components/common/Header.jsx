@@ -8,25 +8,33 @@ const Header = () => {
         <li className="text-white font-bold text-xl">MoviesHub</li>
         <NavLink
           to="/"
-          className={({ isActive }) => (isActive ? "text-white" : undefined)}
+          className={({ isActive }) =>
+            isActive ? "text-white font-semibold" : undefined
+          }
         >
           <li>Trending</li>
         </NavLink>
         <NavLink
           to="/movies"
-          className={({ isActive }) => (isActive ? "text-white" : undefined)}
+          className={({ isActive }) =>
+            isActive ? "text-white font-semibold" : undefined
+          }
         >
           <li>Movies</li>
         </NavLink>
         <NavLink
           to="/series"
-          className={({ isActive }) => (isActive ? "text-white" : undefined)}
+          className={({ isActive }) =>
+            isActive ? "text-white font-semibold" : undefined
+          }
         >
           <li>TV Series</li>
         </NavLink>
         <NavLink
           to="/search"
-          className={({ isActive }) => (isActive ? "text-white" : undefined)}
+          className={({ isActive }) =>
+            isActive ? "text-white font-semibold" : undefined
+          }
         >
           <li>Search</li>
         </NavLink>

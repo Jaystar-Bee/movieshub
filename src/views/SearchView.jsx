@@ -1,7 +1,11 @@
-import React from "react";
+import Movies from "./../components/common/Movies";
 
 const SearchView = () => {
-  return <div>SearchView</div>;
+  return (
+    <div>
+      <Movies />
+    </div>
+  );
 };
 
 export default SearchView;

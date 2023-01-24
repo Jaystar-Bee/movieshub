@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Movies from "../components/common/Movies";
 
 const SeriesView = () => {
   return (
-    <div>SeriesView</div>
-  )
-}
+    <div>
+      <Movies />
+    </div>
+  );
+};
 
-export default SeriesView
+export default SeriesView;
