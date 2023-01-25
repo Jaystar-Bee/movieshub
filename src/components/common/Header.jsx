@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="bg-dark-light text-white py-4 sticky top-0 mb-6">
+    <div className="bg-dark-light text-white py-4 sticky top-0 mb-6 z-20">
       <ul className="flex items-center container mx-auto space-x-10 text-primary-grey duration-500">
         <li className="text-white font-bold text-xl">MoviesHub</li>
         <NavLink
