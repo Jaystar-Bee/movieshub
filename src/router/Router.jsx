@@ -6,6 +6,7 @@ import MoviesView from "./../views/MoviesView";
 import SearchView from "./../views/SearchView";
 import ErrorView from "./../views/ErrorView";
 import Header from "../components/common/Header";
+import CurrentMovieView from "../views/CurrentMovieView";
 
 const Router = () => {
   return (
@@ -16,6 +17,7 @@ const Router = () => {
         <Route path="/series" element={<SeriesView />} />
         <Route path="/movies" element={<MoviesView />} />
         <Route path="/search" element={<SearchView />} />
+        <Route path="/:name/:id" element={<CurrentMovieView />} />
         <Route path="*" element={<ErrorView />} />
       </Routes>
     </BrowserRouter>
