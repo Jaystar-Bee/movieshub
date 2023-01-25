@@ -1,6 +1,8 @@
+import { useState } from "react";
 import Movies from "./../components/common/Movies";
 
 const SearchView = () => {
+  const [movies, setMovies] = useState([]);
   return (
     <div>
       <form className="flex gap-4 mb-10 container">
@@ -15,7 +17,7 @@ const SearchView = () => {
           Search
         </button>
       </form>
-      <Movies />
+      {movies.length > 0 && <Movies />}
     </div>
   );
 };

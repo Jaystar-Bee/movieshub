@@ -10,12 +10,14 @@ const Modal = (props) => {
   );
   const modal = (
     <div className="fixed z-50 top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-dark-light rounded-lg min-w-[24rem] sm:w-[32rem] md:w-[52rem] min-h-[22rem] p-8 text-white">
-      <h2 className="font-bold text-2xl mb-2">Avatar</h2>
+      <h2 className="font-bold text-2xl mb-2">{props.title}</h2>
       <iframe
         width="100%"
         className="h-[24rem]"
         title="123"
-        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"
+        src={
+          props.link || "https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"
+        }
         frameborder="0"
       ></iframe>
       <div className="flex justify-end mt-6">

@@ -15,22 +15,6 @@ const Header = () => {
           <li>Trending</li>
         </NavLink>
         <NavLink
-          to="/movies"
-          className={({ isActive }) =>
-            isActive ? "text-white font-semibold" : undefined
-          }
-        >
-          <li>Movies</li>
-        </NavLink>
-        <NavLink
-          to="/series"
-          className={({ isActive }) =>
-            isActive ? "text-white font-semibold" : undefined
-          }
-        >
-          <li>TV Series</li>
-        </NavLink>
-        <NavLink
           to="/search"
           className={({ isActive }) =>
             isActive ? "text-white font-semibold" : undefined
