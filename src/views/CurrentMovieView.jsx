@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "../components/common/Modal";
 import img1 from "./../assets/img1.jpg";
+import request from "../axios";
 
 const casts = [1, 2, 3, 4, 5, 5, 67, 8, 9, 9];
 const CurrentMovieView = () => {
+  useEffect(() => {}, []);
+
   const [modalIsVisible, setModal] = useState(false);
 
   const toggleModal = () => {
