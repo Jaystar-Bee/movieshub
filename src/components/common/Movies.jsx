@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import SingleMovie from "./SingleMovie";
 
 const movies = [
@@ -45,7 +45,7 @@ const movies = [
 ];
 
 const Movies = () => {
-//   const [currentPage, setCurrentPage] = useState(1);
+  //   const [currentPage, setCurrentPage] = useState(1);
 
   return (
     <div className="container flex gap-10 justify-center flex-wrap pb-20">
@@ -57,12 +57,12 @@ const Movies = () => {
 
       <div className="mt-6">
         <ul className="flex gap-6">
-          <button className="bg-dark-light rounded-md hover:bg-primary-green hover:text-dark px-6 py-4 text-lg duration-500">
+          <button className="bg-dark-light rounded-md hover:bg-primary-green hover:text-dark px-6 py-4 font-semibold text-lg duration-500">
             Previous
           </button>
 
           <li></li>
-          <button className="bg-dark-light rounded-md hover:bg-primary-green hover:text-dark px-6 py-4 text-lg duration-500">
+          <button className="bg-dark-light rounded-md hover:bg-primary-green hover:text-dark px-6 py-4 font-semibold text-lg duration-500">
             Next
           </button>
         </ul>
