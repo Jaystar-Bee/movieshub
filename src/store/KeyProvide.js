@@ -1,12 +1,12 @@
-import React, { createContext } from 'react'
+import React, { createContext, useState } from 'react'
 
 export const apiContext = createContext({
-    apikey: "",
+    apiKey: "",
 })
 
-const apiKey = 'k_c3g1jac0';
-
 const KeyProvide = (props) => {
+
+    const apiKey = "k_c3g1jac0"
 
     const apiDetails = {
         apiKey: apiKey,
