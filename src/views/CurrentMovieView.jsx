@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Modal from "../components/common/Modal";
-import img1 from "./../assets/img1.jpg";
 import request from "../axios";
 import { useParams } from "react-router-dom";
 
@@ -11,7 +10,6 @@ const CurrentMovieView = () => {
   const [movie, setMovie] = useState({});
   useEffect(() => {
     request.get(`/${type}/k_1g468mcp/${id}`).then((res) => {
-      console.log(res.data);
       setMovie(res.data);
     });
   }, []);
@@ -31,34 +29,42 @@ const CurrentMovieView = () => {
           title={movie?.fullTitle}
         />
       )}
-      <div className="container pb-20">
-        <div className="flex gap-10">
+      <div className="container pb-20 mx-4 sm:mx-0">
+        <div className="flex gap-10 flex-col md:flex-row ">
           <img
             src={movie?.image}
             alt=""
-            className="h-[32rem] w-[22rem] rounded-md object-cover"
+            className="h-[26rem] sm:h-[32rem] w-[18rem] sm:w-[22rem] rounded-md object-cover"
           />
           <div className="mt-20">
-            <h1 className="font-extrabold mb-16 text-2xl">
-              {movie?.fullTitle}
+            <h1 className="font-extrabold mb-16 text-lg sm:text-2xl">
+              {movie?.fullTitle || movie?.name}
             </h1>
-            <p className="text-primary-grey">{movie?.plot}</p>
+            <p className="text-primary-grey">{movie?.plot || movie?.summary}</p>
 
-            <p className="font-bold mt-3 text-primary-grey">
-              Release Date: {movie?.releaseDate}
-            </p>
-            <button
-              className="px-6 py-2 bg-primary-green rounded-md mt-8 text-dark text-lg font-semibold"
-              onClick={toggleModal}
-            >
-              Play Trailer
-            </button>
+            {/* show release date only it is a movie */}
+            {movie?.id?.includes("tt") > 0 && (
+              <p className="font-bold mt-3 text-primary-grey">
+                Release Date: {movie?.releaseDate}
+              </p>
+            )}
+            {/* play trailer only it is a movie */}
+            {movie?.id?.includes("tt") > 0 && (
+              <button
+                className="px-6 py-2 bg-primary-green rounded-md mt-8 text-dark text-lg font-semibold"
+                onClick={toggleModal}
+              >
+                Play Trailer
+              </button>
+            )}
           </div>
         </div>
 
         {/* Cast List */}
         <div className="">
-          <h2 className="my-10 font-bold text-xl">Cast</h2>
+          {movie?.actorList?.length > 0 && (
+            <h2 className="my-10 font-bold text-xl">Cast</h2>
+          )}
           <ul className="flex gap-20 flex-wrap">
             {movie?.actorList?.map((cast) => {
               return (

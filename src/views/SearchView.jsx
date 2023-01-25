@@ -38,9 +38,12 @@ const SearchView = () => {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="search movies"
           spellCheck
-          className="px-6 py-2 rounded-md bg-dark-light w-[32rem] outline-none border-none"
+          className="px-4 sm:px-6 py-2 rounded-md bg-dark-light w-[17rem] sm:w-[20rem] md:w-[32rem] outline-none border-none"
         />
-        <button type="submit" className="bg-primary-green py-2 px-6 rounded-md">
+        <button
+          type="submit"
+          className="bg-primary-green py-2 px-4 sm:px-6 rounded-md"
+        >
           {" "}
           Search
         </button>
