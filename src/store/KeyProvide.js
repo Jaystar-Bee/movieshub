@@ -6,7 +6,7 @@ export const apiContext = createContext({
 
 const KeyProvide = (props) => {
 
-    const apiKey = "k_1g468mcp"
+    const apiKey = "k_c3g1jac0"
 
     const apiDetails = {
         apiKey: apiKey,
