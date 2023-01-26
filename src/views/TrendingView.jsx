@@ -21,7 +21,7 @@ const TrendingView = () => {
         setLoading(false);
         alert("Something went wrong");
       });
-  }, []);
+  }, [apiCtx]);
   return (
     <div>
       {loading && (
