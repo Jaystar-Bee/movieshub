@@ -12,7 +12,7 @@ const CurrentMovieView = () => {
     request.get(`/${type}/k_1g468mcp/${id}`).then((res) => {
       setMovie(res.data);
     });
-  }, []);
+  }, [id, type]);
 
   const [modalIsVisible, setModal] = useState(false);
 
