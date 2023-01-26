@@ -1,4 +1,3 @@
-import { ReactDOM } from "react";
 import { createPortal } from "react-dom";
 
 const Modal = (props) => {
